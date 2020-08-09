@@ -1,0 +1,26 @@
+{
+  "name": "goodwork_project",
+  "version": "1.0.0",
+  "description": "Rest API for dynamic screen management",
+  "main": "index.ts",
+  "dependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/uuid": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "migrations": "^1.0.0",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "npm run purge && npm run create && npm run copy-dir && npx tsc",
+    "purge": "rm -rf dist",
+    "create":"mkdir ./dist",
+    "copy-dir": "cp -rv src/ui-config dist/",
+    "start": "node 'dist/index.js'"
+  },
+  "author": "Abhishek Mahra",
+  "license": "ISC"
+}
