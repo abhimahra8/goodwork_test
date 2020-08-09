@@ -12,13 +12,10 @@ export class GetDataService {
             const readerStream = fs.createReadStream(jsonPath);
             readerStream.setEncoding("utf-8");
             readerStream.on('data', chunk => {
-                console.log("^^^^^^^^^^^^^^^^^^ ")
                 data += chunk;
             });
     
             readerStream.on('end',() => {
-                console.log("$$$$$$$$$$$")
-                console.log("ddd -- ",data)
                 resolve(data);
             });
     
